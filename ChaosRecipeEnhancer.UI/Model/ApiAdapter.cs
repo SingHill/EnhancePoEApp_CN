@@ -59,7 +59,7 @@ namespace ChaosRecipeEnhancer.UI.Model
             {
                 try
                 {
-                    var json = wc.DownloadString("https://api.pathofexile.com/leagues?type=main");
+                    var json = wc.DownloadString("https://poe.game.qq.com/api/leagues?type=main");
                     var document = JsonDocument.Parse(json);
                     var allLeagueData = document.RootElement.EnumerateArray();
 
@@ -138,7 +138,7 @@ namespace ChaosRecipeEnhancer.UI.Model
                 var stashTab = i.TabIndex.ToString();
                 i.StashTabUri =
                     new Uri(
-                        $"https://www.pathofexile.com/character-window/get-stash-items?accountName={accName}&realm=pc&league={league}&tabIndex={stashTab}");
+                        $"https://poe.game.qq.com/character-window/get-stash-items?accountName={accName}&realm=pc&league={league}&tabIndex={stashTab}");
                 // https://www.pathofexile.com/character-window/get-stash-items?accountName=ClumsyParasite&realm=pc&league=Standard&tabs=1&tabIndex=0
             }
         }
@@ -177,7 +177,7 @@ namespace ChaosRecipeEnhancer.UI.Model
             IsFetching = true;
             var propsUri =
                 new Uri(
-                    $"https://www.pathofexile.com/character-window/get-stash-items?accountName={accName}&realm=pc&league={league}&tabs=1&tabIndex=0");
+                    $"https://poe.game.qq.com/character-window/get-stash-items?accountName={accName}&realm=pc&league={league}&tabs=1&tabIndex=0");
             // https://www.pathofexile.com/character-window/get-stash-items?accountName=ClumsyParasite&realm=pc&league=Standard&tabs=1&tabIndex=0
 
             var sessionId = Settings.Default.SessionId;
