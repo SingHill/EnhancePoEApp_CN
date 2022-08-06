@@ -6,7 +6,7 @@ namespace ChaosRecipeEnhancer.DataModels.GGGModels
     /// <summary>
     /// TODO
     /// </summary>
-    /// <seealso cref="https://www.pathofexile.com/developer/docs/reference#type-Item"/>
+    /// <seealso cref="https://poe.game.qq.com/developer/docs/reference#type-Item"/>
     public partial class Item
     {
         [JsonPropertyName("w")] public int Width { get; set; }
